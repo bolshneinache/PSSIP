@@ -1,3 +1,3 @@
 # HELLO
 
-I am Igor Bolshakov  and I am :banana:
+PSSIP Project in collaboration with AlexZyk. 
