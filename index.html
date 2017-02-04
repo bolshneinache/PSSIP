@@ -1,0 +1,23 @@
+﻿<html ng-app="Module">
+
+<head>
+	<meta charset="utf8">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+
+<body ng-controller="IndexController as MyCtrl">
+
+	<div ng-if="!picSrc">
+		<input class=widebutton type="button" value="Дай песок!" ng-click="GetImageSrc()">
+	</div>
+	
+	<div ng-if="picSrc">
+		<input class=widebutton type="button" value="Убери песок!" ng-click="ClearImageSrc()"><br>
+		<img ng-src={{picSrc}}>
+	</div>
+	
+</body>
+
+</html>
