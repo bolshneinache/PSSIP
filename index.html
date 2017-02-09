@@ -9,15 +9,24 @@
 
 <body ng-controller="IndexController as MyCtrl">
 
-	<div ng-if="!picSrc">
-		<input class=widebutton type="button" value="Дай песок!" ng-click="GetImageSrc()">
+	<div class="main" align="center">
+		<div class="test01" align="center">
+			<div ng-if="!picSrc">
+				<input type="button" value="Дай песок!" ng-click="GetImageSrc()">
+			</div>
+
+			<div ng-if="picSrc">
+				<input type="button" value="Убери песок!" ng-click="ClearImageSrc()"><br>
+				<img ng-src={{picSrc}}>
+			</div>
+		</div>
+
+		<div class="test02" align="center">
+			<input type="text" ng-model="enteredURL" placeholder="Введите URL картинки:"><br>
+			<img ng-src="{{enteredURL}}">
+		</div>	
 	</div>
-	
-	<div ng-if="picSrc">
-		<input class=widebutton type="button" value="Убери песок!" ng-click="ClearImageSrc()"><br>
-		<img ng-src={{picSrc}}>
-	</div>
-	
+
 </body>
 
 </html>

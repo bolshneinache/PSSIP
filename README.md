@@ -1,3 +1,9 @@
 # HELLO
 
-PSSIP Project in collaboration with AlexZyk. 
+PSSIP Project.
+
+Developers:
+Igor Bolshakov
+Alexander Zyk
+
+Group #444601

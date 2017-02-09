@@ -6,11 +6,11 @@ angular.module('Module',[])
 		{
 			$scope.picSrc="img/1.jpg";		
 		}
-		
+
 		$scope.ClearImageSrc = function()
 		{
 			$scope.picSrc=null;		
 		}
-		
+
 	}]
 );
