@@ -4,7 +4,7 @@
 	<meta charset="utf8">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/angular.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/main.controller.js"></script>
 </head>
 
 <body ng-controller="IndexController as MyCtrl">
@@ -23,8 +23,26 @@
 
 		<div class="test02" align="center">
 			<input type="text" ng-model="enteredURL" placeholder="Введите URL картинки:"><br>
-			<img ng-src="{{enteredURL}}">
-		</div>	
+			<img class="pic" ng-src="{{enteredURL}}">
+		</div>
+
+		<div class="test03" align="center">	
+			<span>Что выводим?</span>	
+
+			<input type="checkbox" id="jpg" ng-click="Filter('jpg')">
+			<label for="jpg">.jpg</label>	
+
+			<input type="checkbox" id="gif" ng-click="Filter('gif')">
+			<label for="jpg">.gif</label>
+
+			<input type="checkbox" id="png" ng-click="Filter('png')">
+			<label for="jpg">.png</label>
+
+			<div align="center" ng-repeat="image in Images">
+				<img ng-src="{{image.src}}">
+				{{image.text}}<br>
+			</div>
+		</div>
 	</div>
 
 </body>
